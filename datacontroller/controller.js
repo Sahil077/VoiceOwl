@@ -8,8 +8,8 @@ mongoose.set("strictQuery", true);
 const uri = `mongodb+srv://${process.env.DB_USER}:${encodeURIComponent(process.env.DB_PASS)}@cluster0.aja61.mongodb.net/voiceOwl?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose.connect(uri)
-.then(() => console.log("✅ MongoDB connected successfully!"))
-.catch(err => console.error("❌ MongoDB connection error:", err));
+.then(() => console.log("MongoDB connected successfully!"))
+.catch(err => console.error("MongoDB connection error:", err));
 
 const audioSchema = new mongoose.Schema({
     audioUrl: String,
