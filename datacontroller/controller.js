@@ -5,7 +5,7 @@ mongoose.pluralize(null);
 
 mongoose.set("strictQuery", true);
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${encodeURIComponent(process.env.DB_PASS)}@cluster0.aja61.mongodb.net/voiceOwl?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.aja61.mongodb.net/voiceOwl?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose.connect(uri)
 .then(() => console.log("MongoDB connected successfully!"))
